@@ -151,3 +151,14 @@ def term(request):
 
 def depart(request):
     return render(request,'depart.html')
+
+
+
+
+def enquiry_view(request):
+    if request.method == 'POST':
+        # Handle form submission here
+        return HttpResponse("Enquiry submitted successfully!")
+    else:
+        # Render the form template here
+        return render(request, 'enquiry_form.html')

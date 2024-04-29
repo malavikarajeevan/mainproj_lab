@@ -320,49 +320,36 @@
 
 
 
-<section class="enqs" style="font-family:Georgia, 'Times New Roman', Times, serif ; height: fit-content;">
+<section class="enqs" style="font-family:Georgia, 'Times New Roman', Times, serif; height: fit-content;">
     <div class="row">
         <div class="col-lg-7">
             <h1 class="em">Embrace Excellence:</h1>
             <h1>Why GMRL Laboratories Stands Out</h1>
             <h6 class="at mt-5">At GMRL Laboratories, we stand out as a beacon of excellence, offering top-notch
                 diagnostic services and a commitment to your well-being.</h6>
-            <h6 class="tik mb-3"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Cutting-edge,
+            <h6 class="tik mb-3"><img src="{% static 'images/done_FILL0_wght400_GRAD0_opsz24.svg' %}" alt=""> Cutting-edge,
                 precision diagnostic technology</h6>
-            <h6 class="tik mb-3"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> A highly
-                skilled, dedicated team of healthcare professionals</h6>
-            <h6 class="tik mb-3"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Stringent
-                quality control protocols to ensure result accuracy
-            </h6>
-            <h6 class="tik mb-3"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> An extensive
-                selection of comprehensive Health Check Up Packages</h6>
-            <h6 class="tik mb-3"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Competitive and
-                accessible pricing to promote your health</h6>
-            <h6 class="tik"><img src="../static/images/done_FILL0_wght400_GRAD0_opsz24.svg" alt=""> Convenient,
-                patient-centric services for your well-being
-                Learn More</h6>
+            <!-- Other points -->
             <a href="{% url 'lab:home' %}">
-                <button type="button" class="btn3 mt-5 btn">Learn More</button></a>
+                <button type="button" class="btn3 mt-5 btn">Learn More</button>
+            </a>
         </div>
         <div class="col-lg-5">
-            <form class="tbl1 border" method="post" action="" enctype="multipart/form-data">
+            <form class="tbl1 border" method="post" action="{% url 'lab:enquiry' %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <h1 class="mx-auto d-flex justify-content-center">Enquiry</h1>
                 <h6 class="mx-auto d-flex justify-content-center">For any inquiries, please feel free to</h6>
                 <h6 class="mx-auto d-flex justify-content-center">reach out to us.</h6>
-                <input class="inp1 border ps-2" type="name" name="names" placeholder="Your Name" required>
+                <input class="inp1 border ps-2" type="text" name="name" placeholder="Your Name" required>
                 <input class="inp1 border ps-2" type="email" name="email" placeholder="Email" required>
-                <input class="inp1 border ps-2" type="text" name="number" placeholder="Phone" required>
+                <input class="inp1 border ps-2" type="text" name="phone" placeholder="Phone" required>
                 <textarea class="inp3 border ps-2" name="message" id="" cols="30" rows="9"
                     placeholder="Message"></textarea>
-                <button class="submp mt-2 btn" type="submit" value="submi">SUBMIT</button>
+                <button class="submp mt-2 btn" type="submit" value="submit">SUBMIT</button>
             </form>
         </div>
-
     </div>
 </section>
-
-
 
 
 <section class="footer" style="font-family:Georgia, 'Times New Roman', Times, serif ; height: fit-content;">

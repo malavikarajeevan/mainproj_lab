@@ -18,6 +18,7 @@ urlpatterns = [
     path('privacy/',views.privacy,name='privacy'),
     path('term/',views.term,name='term'),
     path('depart/',views.depart,name='depart'),
+    path('enquiry/', views.enquiry_view, name='enquiry'),
  
 
 ]
