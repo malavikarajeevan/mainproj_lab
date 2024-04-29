@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="packages w-100" id="package">
+    <div class="row w-100">
+        <div class="abi col-lg-6">
+
+            <h1>Privacy Policy</h1>                                 
+
+
+        </div>
+        <div class="tip col-lg-6">
+            <img src="../static/images/blog.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="row polrw mt-5">
+<h1 class="mt-3">Who we are</h1>
+<h6>Suggested text: Our website address is: http://localhost/gmrl.</h6>
+
+<h1 class="mt-4">Comments</h1>
+<h6>Suggested text: When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.</h6>
+
+<h6 class="mt-3">An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</h6>
+
+<h1 class="mt-4">Media</h1>
+<h6>Suggested text: If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</h6>
+
+<h1>Cookies</h1>
+<h6>Suggested text: If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</h6>
+
+<h6 class="mt-3">If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</h6>
+
+<h6 class="mt-3">When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select "Remember Me", your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</h6>
+
+<h6 class="mt-3">If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</h6>
+
+<h1 class="mt-4">Embedded content from other websites</h1>
+<h6>Suggested text: Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</h6>
+
+<h6 class="mt-3">These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</h6>
+
+<h1 class="mt-4">Who we share your data with</h1>
+<h6>Suggested text: If you request a password reset, your IP address will be included in the reset email.</h6>
+
+<h1 class="mt-4">How long we retain your data</h1>
+<h6>Suggested text: If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.</h6>
+
+<h6 class="mt-3">For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</h6>
+
+<h1 class="mt-4">What rights you have over your data</h1>
+<h6>Suggested text: If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</h6>
+
+<h1 class="mt-4">Where your data is sent</h1>
+<h6 class="mb-5">Suggested text: Visitor comments may be checked through an automated spam detection service.</h6>
+
+
+
+
+</div>
+</section>
+
+
+
+<section class="footer" style="font-family:Georgia, 'Times New Roman', Times, serif ;">
+    <div class="rw2 row mx-auto"   >
+        <div class="col9 col-lg-8">
+            <div class="row">
+                <div class="col-lg-2" >
+                    <img class="mt-4 ms-3" src="../static/images/make-appointment.png" alt="">
+                </div>
+                <div class="col-lg-7 mt-4" >
+                    <h8 class="ms-0"> Make an Appointment</h8>
+                    <h8 class="ms-0">Call +91 81388 62626 or click Book Now to secure your appointment.</h8>
+                </div>
+                <div class="col-lg-3">
+                    <a href="{% url 'lab:appointment' %}">
+                        <button type="button" class="btn4 mt-5 btn btn-dark ">Book Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col91 col-lg-4">
+            <div class="row col9rw">
+                <div class="col-lg-3">
+                    <img class="mt-4" src="../static/images/openinh-hours-logo.png" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <h7 class="mt-3">Opening Hours</h7>
+                    <h7>Mon - Sat : 6:30pm to 6:00pm</h7>
+                    <h7>Sun : 6:30am - 12:30pm</h7>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rw3 row">
+        <div class="col-lg-2">
+            <img src="../static/images/gmrl-footer-logo.svg" alt="">
+        </div>
+        <div class="col-lg-2">
+            <h4 class="mb-4">Quick Links</h4>
+            <a href="{% url 'lab:home' %}">
+                <h6>Home</h6>
+            </a>
+            <a href="{% url 'lab:about' %}">
+                <h6>About Us</h6>
+            </a>
+            <a href="{% url 'lab:package' %}">
+                <h6>Packages</h6>
+            </a>
+            <a href="{% url 'lab:test' %}">
+                <h6>Tests</h6>
+            </a>
+            <a href="{% url 'lab:gallery' %}">
+                <h6>Gallery</h6>
+            </a>
+            <a href="{% url 'lab:blog' %}">
+                <h6>Blog</h6>
+            </a>
+            <a href="">
+            <h6>Testimonials</h6>
+            </a>
+            <a href="{% url 'lab:branches' %}">
+                <h6>Branches</h6>
+            </a>
+            <a href="{% url 'lab:contacts' %}">
+                <h6>Contact Us</h6>
+            </a>
+            <a href="{% url 'lab:privacy' %}">
+                <h6>Privacy Policy</h6>
+            </a>
+            <a href="{% url 'lab:term' %}">
+                <h6>Terms & Conditions</h6>
+            </a>
+        </div>
+        <div class="col-lg-2">
+            <h4 class="mb-4">Departments</h4>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Pathology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Biochemistry</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Microbiology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Serology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Immunology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Radiology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Molecular Biology</h6>
+            </a>
+        </div>
+        <div class="col-lg-3">
+            <h4 class="mb-4">Our Packages</h4>
+            <a href="http://127.0.0.1:8005/packages/1   ">
+                <h6>Executive Package</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/2">
+                <h6>Ayush General</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/3">
+                <h6>Ayush Silver Plan</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/4">
+                <h6>Ayush Diabetic & Kidney Care</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/5">
+                <h6>Ayush Gold</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/6">
+                <h6>Advanced Cardiac Risk Cover Package</h6>
+            </a>
+
+        </div>
+        <div class="col-lg-3">
+            <h4 class="mb-4">Get In Touch</h4>
+            <h6>GMRL Laboratories Chambakkara, Ernakulam, Ernakulam - 682011</h6>
+            <h6>+91 81388 62626</h6>
+            <h6>0484 0000 0000</h6>
+            <h6>info@gmrllabs.com</h6>
+            <div class="rw4 row">
+                <div class="col-lg-3">
+                    <div class="fce">
+                        <i class='bx bxl-facebook' style='color:#ffffff'  ></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="twi">
+                    <i class='bx bxl-twitter' style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="lik">
+                    <i class='bx bxl-linkedin' style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="inst">
+                    <i class='bx bxl-instagram' style="color: #ffffff;" ></i>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

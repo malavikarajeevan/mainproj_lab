@@ -1,0 +1,86 @@
+{% load static %}
+<div class="mqin">
+    <div class="rw1 row">
+        <div class="col-lg-6 col-md-6 col-sm-6 oci">
+            <ul class="socialmedia d-flex justify-content-end">
+                <a href="" class="fb me-4" target="_blank">
+                    <i class='bx bxl-facebook-circle' style='color:#525252'></i>
+                </a>
+
+                <a href="" class="tw me-4" target="_blank">
+                    <i class='bx bxl-twitter' style='color:#7b7b7b'></i>
+                </a>
+                <a href="" class="li me-4" target="_blank">
+                    <i class='bx bxl-linkedin' style='color:#7b7b7b'></i>
+                </a>
+                <a href="" class="in" target="_blank">
+                    <i class='bx bxl-instagram' style='color:#7b7b7b'></i>
+                </a>
+            </ul>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 maker">
+            <a href="{% url 'lab:appointment' %}"><button class="btn btn">Make An Appointment</button></a>
+        </div>
+    </div>
+    <nav id="navbar" class="navbar shadow-lg navbar-expand-lg bg-light mx-auto">
+      <div class="container-fluid">
+        <a href="{% url 'lab:home' %}"><img class="ima" style="margin-left: 60px;" src="../static/images/gmrl-logo.svg" width="280px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse  navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="margin-left: 290px; ">
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:about' %}">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:test' %}">TESTS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:package' %}">PACKAGES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:blog' %}">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:gallery' %}">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:branches' %}">BRANCHES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn nav-link" href="{% url 'lab:contacts' %}">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) 
+      {
+        navbar.classList.add('sticky-navbar');
+        navbar.style.width='100vw';
+
+      } 
+        else {
+        navbar.classList.remove('sticky-navbar');
+        navbar.style.width='88vw';
+
+        
+      }
+    });
+
+
+    
+  </script>
+<section class="header-fixed fixed-top headertop-div">
+
+</section>

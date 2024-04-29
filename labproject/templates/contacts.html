@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="packages w-100" id="package" style="font-family:Georgia, 'Times New Roman', Times, serif ;">
+    <div class="row w-100">
+        <div class="abi col-lg-6">
+
+            <h1>Contact Us</h1>
+            <h6>Connect with GMRL Labs for personalized health solutions –</h6>
+            <h6>your well-being is just a call away.</h6>
+
+        </div>
+        
+        <div class="tip col-lg-6">
+            <img src="../static/images/contacts.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="contact1" style="font-family:Georgia, 'Times New Roman', Times, serif ;">
+    <div class="row conts">
+    <div class="card ms-4" style="width: 19rem;">
+        <div class="ing rounded-circle">
+            <i class='pic bx bxs-phone' style='color:#ffffff'  ></i>
+        </div>
+
+        <div class="card-body mb-0">
+            <h4 class="card-text mb-1">Phone</h4>
+            <p class="card-text mb-1">+91 81388 62626</p>
+            <p class="card-text mb-0">0484 0000 0000</p>
+            
+        </div>
+      </div>
+
+      <div class="card ms-4" style="width: 19rem;">
+        <div class="ing rounded-circle">
+        <i class='pic bx bx-envelope' style='color:#ffffff' ></i>
+    </div>
+
+        <div class="card-body">
+          <h5 class="card-text mt-1 mb-2">Email</h5>
+            <p class="card-text">info@gmrllabs.com</p>
+        </div>
+      </div>
+
+      <div class="card ms-4" style="width: 19rem;">
+        <div class="ing rounded-circle">
+        <i class='pic bx bx-map' style='color:#ffffff' ></i>
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-text mt-1 mb-1">Address</h5>
+            <p class="card-text">GMRL Laboratories Chambakkara, Ernakulam, Ernakulam - 682011</p>
+        </div>
+      </div>
+
+      <div class="card ms-4" style="width: 19rem;">
+        <div class="ing rounded-circle">
+        <i class='pic bx bx-time-five' style='color:#ffffff' ></i>
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-text mt-1 mb-1">Opening Hours</h5>
+            <p class="card-text mb-1">Mon - Sat : 6:30pm to 6:00pm</p>
+            <p class="card-text">Sun : 6:30am - 12:30pm</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="contact2"style="font-family:Georgia, 'Times New Roman', Times, serif ;">
+    <div class="row conts2">
+        <div class="col-lg-5">
+            <img src="../static/images/contact2.jpg" width="460px" height="380px" class="contim2 rounded" alt="">
+        </div>
+
+        <div class="col-lg-7">
+            <h3 class="sndes">Send us a message</h3>
+            <h6 class="cons">Connect with us and share your thoughts – your message matters to us.</h6>
+            
+            <div class="contact-form w-75">
+                <form method="post" action="#">
+                    {% csrf_token %}
+                    <input class="inps ps-2" type="name" name="name" placeholder="Your Name" required>
+                    <input class="inps ps-2"  type="email" name="email" placeholder="Email" required>
+                    <input class="inps ps-2" type="text" name="phone" placeholder="Phone" required>
+                    <input class="inps ps-2" type="text" name="subject" placeholder="Subject" required>
+                    <textarea class="inp2 ps-2" name="message" id="" cols="30" rows="9" placeholder="Message"></textarea>
+                    <button type="submit" class="subm btn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="conrw3 row mx-auto d-flex">
+     <iframe class="conmap mt-5 mb-5" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7859.553450312518!2d76.323388!3d9.952526!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0873f5f90cc883%3A0x6b02b06cd62db722!2sGMRL%20Laboratories%20Chambakkara!5e0!3m2!1sen!2sin!4v1710921686951!5m2!1sen!2sin" width="1200" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<section class="footer" style="font-family:Georgia, 'Times New Roman', Times, serif ; height: fit-content;">
+    <div class="rw2 row mx-auto"   >
+        <div class="col9 col-lg-8">
+            <div class="row">
+                <div class="col-lg-2" >
+                    <img class="mt-4 ms-3" src="../static/images/make-appointment.png" alt="">
+                </div>
+                <div class="col-lg-7 mt-4" >
+                    <h8 class="ms-0"> Make an Appointment</h8>
+                    <h8 class="ms-0">Call +91 81388 62626 or click Book Now to secure your appointment.</h8>
+                </div>
+                <div class="col-lg-3">
+                    <a href="{% url 'lab:appointment' %}">
+                        <button type="button" class="btn4 mt-5 btn btn-dark ">Book Now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col91 col-lg-4">
+            <div class="row col9rw">
+                <div class="col-lg-3">
+                    <img class="mt-4" src="../static/images/openinh-hours-logo.png" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <h7 class="mt-3">Opening Hours</h7>
+                    <h7>Mon - Sat : 6:30pm to 6:00pm</h7>
+                    <h7>Sun : 6:30am - 12:30pm</h7>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rw3 row">
+        <div class="col-lg-2">
+            <img src="../static/images/gmrl-footer-logo.svg" alt="">
+        </div>
+        <div class="col-lg-2">
+            <h4 class="mb-4">Quick Links</h4>
+            <a href="{% url 'lab:home' %}">
+                <h6>Home</h6>
+            </a>
+            <a href="{% url 'lab:about' %}">
+                <h6>About Us</h6>
+            </a>
+            <a href="{% url 'lab:package' %}">
+                <h6>Packages</h6>
+            </a>
+            <a href="{% url 'lab:test' %}">
+                <h6>Tests</h6>
+            </a>
+            <a href="{% url 'lab:gallery' %}">
+                <h6>Gallery</h6>
+            </a>
+            <a href="{% url 'lab:blog' %}">
+                <h6>Blog</h6>
+            </a>
+            <a href="">
+            <h6>Testimonials</h6>
+            </a>
+            <a href="{% url 'lab:branches' %}">
+                <h6>Branches</h6>
+            </a>
+            <a href="{% url 'lab:contacts' %}">
+                <h6>Contact Us</h6>
+            </a>
+            <a href="{% url 'lab:privacy' %}">
+                <h6>Privacy Policy</h6>
+            </a>
+            <a href="{% url 'lab:term' %}">
+                <h6>Terms & Conditions</h6>
+            </a>
+        </div>
+        <div class="col-lg-2">
+            <h4 class="mb-4">Departments</h4>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Pathology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Biochemistry</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Microbiology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Serology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Immunology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Radiology</h6>
+            </a>
+            <a href="{% url 'lab:depart' %}">
+                <h6>Molecular Biology</h6>
+            </a>
+        </div>
+        <div class="col-lg-3">
+            <h4 class="mb-4">Our Packages</h4>
+            <a href="http://127.0.0.1:8005/packages/1   ">
+                <h6>Executive Package</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/2">
+                <h6>Ayush General</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/3">
+                <h6>Ayush Silver Plan</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/4">
+                <h6>Ayush Diabetic & Kidney Care</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/5">
+                <h6>Ayush Gold</h6>
+            </a>
+            <a href="http://127.0.0.1:8005/packages/6">
+                <h6>Advanced Cardiac Risk Cover Package</h6>
+            </a>
+
+        </div>
+        <div class="col-lg-3">
+            <h4 class="mb-4">Get In Touch</h4>
+            <h6>GMRL Laboratories Chambakkara, Ernakulam, Ernakulam - 682011</h6>
+            <h6>+91 81388 62626</h6>
+            <h6>0484 0000 0000</h6>
+            <h6>info@gmrllabs.com</h6>
+            <div class="rw4 row">
+                <div class="col-lg-3">
+                    <div class="fce">
+                        <i class='bx bxl-facebook' style='color:#ffffff'  ></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="twi">
+                    <i class='bx bxl-twitter' style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="lik">
+                    <i class='bx bxl-linkedin' style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="inst">
+                    <i class='bx bxl-instagram' style="color: #ffffff;" ></i>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
