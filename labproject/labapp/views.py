@@ -109,20 +109,20 @@ def appointment(request):
     if request.method == "POST":
         name = request.POST.get('names', '')
         email = request.POST.get('email', '')
-        phone = request.POST.get('phone', '')  # Ensure to provide a default value if the field is empty
+        phone = request.POST.get('phone', '')  
         time = request.POST.get('time', '')
         date = request.POST.get('date', '')
         age = request.POST.get('age', '')
-        gender = request.POST.get('gender', '')  # Corrected typo in 'state'
+        gender = request.POST.get('gender', '')  
         address = request.POST.get('address', '')
         message = request.POST.get('message', '')
 
         # Validate phone number
         if not phone:
-            return HttpResponse("Phone number is required")  # Provide appropriate feedback to the user
+            return HttpResponse("Phone number is required")  
 
         try:
-            phone = int(phone)  # Convert phone to integer
+            phone = int(phone)  
         except ValueError:
             return HttpResponse("Invalid phone number")
 
@@ -157,8 +157,8 @@ def depart(request):
 
 def enquiry_view(request):
     if request.method == 'POST':
-        # Handle form submission here
+       
         return HttpResponse("Enquiry submitted successfully!")
     else:
-        # Render the form template here
+       
         return render(request, 'enquiry_form.html')
