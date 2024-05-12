@@ -320,7 +320,7 @@
 
 
 
-<section class="enqs" style="font-family:Georgia, 'Times New Roman', Times, serif; height: fit-content;">
+<section class="enqs" style="font-family: Georgia, 'Times New Roman', Times, serif; height: fit-content;">
     <div class="row">
         <div class="col-lg-7">
             <h1 class="em">Embrace Excellence:</h1>
@@ -335,14 +335,15 @@
             </a>
         </div>
         <div class="col-lg-5">
-            <form class="tbl1 border" method="post" action="{% url 'lab:enquiry' %}" enctype="multipart/form-data">
+            <form class="tbl1 border" method="post" action="{% url 'lab:enquiry' %}" enctype="multipart/form-data" onsubmit="return validateForm()">
                 {% csrf_token %}
                 <h1 class="mx-auto d-flex justify-content-center">Enquiry</h1>
                 <h6 class="mx-auto d-flex justify-content-center">For any inquiries, please feel free to</h6>
                 <h6 class="mx-auto d-flex justify-content-center">reach out to us.</h6>
                 <input class="inp1 border ps-2" type="text" name="name" placeholder="Your Name" required>
                 <input class="inp1 border ps-2" type="email" name="email" placeholder="Email" required>
-                <input class="inp1 border ps-2" type="text" name="phone" placeholder="Phone" required>
+                <!-- Add pattern and title attributes to enforce numeric input -->
+                <input class="inp1 border ps-2" type="text" name="phone" placeholder="Phone" pattern="[0-9]*" title="Please enter only numeric characters" required>
                 <textarea class="inp3 border ps-2" name="message" id="" cols="30" rows="9"
                     placeholder="Message"></textarea>
                 <button class="submp mt-2 btn" type="submit" value="submit">SUBMIT</button>
@@ -350,7 +351,6 @@
         </div>
     </div>
 </section>
-
 
 <section class="footer" style="font-family:Georgia, 'Times New Roman', Times, serif ; height: fit-content;">
     <div class="rw2 row mx-auto"   >

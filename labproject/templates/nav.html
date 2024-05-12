@@ -19,12 +19,55 @@
             </ul>
 
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 maker">
+        <!-- Display "Make An Appointment" button only on larger screens -->
+        <div class="col-lg-6 col-md-6 col-sm-6 maker d-none d-lg-block">
             <a href="{% url 'lab:appointment' %}"><button class="btn btn">Make An Appointment</button></a>
         </div>
     </div>
-    <nav id="navbar" class="navbar shadow-lg navbar-expand-lg bg-light mx-auto">
-      <div class="container-fluid">
+</div>
+
+<!-- Offcanvas for small screens -->
+<!-- <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body"> -->
+        <!-- Navigation links -->
+        <!-- <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:test' %}">Tests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:package' %}">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:branches' %}">Branches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:contacts' %}">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div> -->
+
+<!-- Normal Navbar for larger screens -->
+<!-- <nav id="navbar" class="navbar shadow-lg navbar-expand-lg bg-light mx-auto">
+    <div class="container-fluid">
         <a href="{% url 'lab:home' %}"><img class="ima" style="margin-left: 60px;" src="{% static 'images/gmrl-logo.svg' %}" width="280px" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +81,77 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'lab:test' %}">TESTS</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:package' %}">PACKAGES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:blog' %}">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:gallery' %}">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:branches' %}">BRANCHES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:contacts' %}">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ -->
 
+
+<nav id="navbar" class="navbar shadow-lg navbar-expand-lg bg-light mx-auto">
+    <div class="container-fluid">
+        <a href="{% url 'lab:home' %}"><img class="ima" style="margin-left: 60px;" src="{% static 'images/gmrl-logo.svg' %}" width="280px" alt=""></a>
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start hidden-lg-up" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: blue;">
+        <div class="offcanvas-header" >
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <ul class="nnn" style="margin-right: 200px; line-height: 40px;">
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:about' %}">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:test' %}">TESTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:package' %}">PACKAGES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:blog' %}">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:gallery' %}">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:branches' %}">BRANCHES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'lab:contacts' %}">CONTACT US</a>
+            </li>
+            </ul>
+
+          
+         
+            
+        
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" style="margin-left: 290px; ">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:about' %}">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lab:test' %}">TESTS</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'lab:package' %}">PACKAGES</a>
                 </li>
@@ -57,28 +170,27 @@
             </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
+<script>
+    
 
-  <script>
     window.addEventListener('scroll', function() {
-      var navbar = document.getElementById('navbar');
-      if (window.scrollY > 100) 
-      {
-        navbar.classList.add('sticky-navbar');
-        navbar.style.width='100vw';
-
-      } 
-        else {
-        navbar.classList.remove('sticky-navbar');
-        navbar.style.width='88vw';
-
-        
-      }
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 100) {
+            navbar.classList.add('sticky-navbar');
+            navbar.style.width = '100vw';
+        } else {
+            navbar.classList.remove('sticky-navbar');
+            navbar.style.width = '88vw';
+        }
     });
 
-
     
-  </script>
-<section class="header-fixed fixed-top headertop-div">
+</script>
 
-</section>
+
+
+
+
+<section class="header-fixed fixed-top headertop-div"></section>

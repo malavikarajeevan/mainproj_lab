@@ -125,6 +125,19 @@ $(document).ready(function () {
     });
 });
 
+
+function validateForm() {
+    var phoneInput = document.getElementsByName('phone')[0];
+    var phoneValue = phoneInput.value;
+    // Check if the input contains only numeric characters
+    var regex = /^[0-9]*$/;
+    if (!regex.test(phoneValue)) {
+        alert("Please enter a valid phone number (numeric characters only).");
+        return false; // Prevent form submission
+    }
+    return true; // Allow form submission if validation passes
+}
+
     // window.addEventListener('DOMContentLoaded', function() {
     //     const container = document.querySelector('.packing'); // Select the container element
 
